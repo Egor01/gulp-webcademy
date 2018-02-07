@@ -1,19 +1,19 @@
 # Gulp сборка для совместной работы
 
 Данный стартовый шаблон имеет gulp задачи:
-    - browser-sync - локальный сервер;
-    - gulp-less и gulp-pug для компиляции less, pug файлов;
-    - gulp-sourcemaps создания карт стилей;
-    - autoprefixer для автоматического проставления префиксов;
-    - gulp-notify для нотификации ошибок;
-    - gulp-plumber для того чтобы не перезапускать gulp если была допущена ошибка;
-    - del для удаления файлов перед копированием;
-    - run-sequence для последовательного запуска наших тасков;
-    - gulp-watch чтобы отслеживать наши изменения в файлах;
-    - gulp-svgmin, gulp-cheerio, gulp-replace, gulp-svgsprite для работы с svg;
-    - gulp-rename для переименование файлов;
-    - gulp-imagemin, imagemin-pngquant для оптимизации изображений;
-    - gulp-usemin, gulp-htmlclean, gulp-uglify, gulp-minify-css, gulp-rev для оптимизации html, css, js файлов.
+ - browser-sync - локальный сервер;
+ - gulp-less и gulp-pug для компиляции less, pug файлов;
+ - gulp-sourcemaps создания карт стилей;
+ - autoprefixer для автоматического проставления префиксов;
+ - gulp-notify для нотификации ошибок;
+ - gulp-plumber для того чтобы не перезапускать gulp если была допущена ошибка;
+ - del для удаления файлов перед копированием;
+ - run-sequence для последовательного запуска наших тасков;
+ - gulp-watch чтобы отслеживать наши изменения в файлах;
+ - gulp-svgmin, gulp-cheerio, gulp-replace, gulp-svgsprite для работы с svg;
+ - gulp-rename для переименование файлов;
+ - gulp-imagemin, imagemin-pngquant для оптимизации изображений;
+ - gulp-usemin, gulp-htmlclean, gulp-uglify, gulp-minify-css, gulp-rev для оптимизации html, css, js файлов.
    
 ### С чего начать:
 
