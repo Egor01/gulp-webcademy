@@ -1,0 +1,9 @@
+mixin button(text, link, btnclass, icon)
+    if icon
+        a(href=link class="button " + btnclass)
+            | #{text}
+            i(class="fa " + icon)
+            
+    else
+        a(href=link class="button " + btnclass)
+            | #{text}

@@ -1,0 +1,20 @@
+extends layouts/ui-layout.pug
+
+block variables
+    - var title = 'UI Buttons'
+
+block content
+    section.section_ui
+        h1.heading_ui
+            |UI Buttons
+        +button('Вперед','#','', 'fa-arrow-right')
+        br
+        +button('Подробнее','#', '')
+        br
+        +button('Редактировать','#', 'button--edit')
+        br
+        +button('Удалить','#', 'button--delete')
+        br
+        +button('Сохранить','#', 'button--save')
+        br
+        +button('Войти','#', 'button--login')

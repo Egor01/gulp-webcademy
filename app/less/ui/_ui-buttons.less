@@ -1,0 +1,97 @@
+.button {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color:  #037ec6;
+    padding: 14px 30px;
+    margin-top: 20px; /* optional */
+    margin-bottom: 20px; /* optional */
+    border-color: #dde8ee;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    i {
+        padding-left: 8px;
+    }
+
+    &:hover {
+        background-color: #dde8ee;
+    }
+    &:active {
+        background-color: #b4dff6;
+        border-color: #b4dff6;
+    }
+
+
+    &--edit {
+        color: #ffffff;
+        background-color: #ffba00;
+        border-color: #ffba00;
+
+        &:hover {
+            background-color: #ffcf3e;
+            border-color: #ffcf3e;
+        }
+        &:active {
+            background-color: #f29a00;
+            border-color: #f29a00;
+        }
+    }
+
+
+    &--delete {
+        font-size: 14px;
+        color: #ffffff;
+        padding: 9px 20px;
+        background-color: #b51919;
+        border-color: #b51919;
+
+        &:hover {
+            background-color: #e70c0c;
+            border-color: #e70c0c;
+        }
+        &:active {
+            background-color: #990101;
+            border-color: #990101;
+        }
+    }
+
+
+    &--save {
+        color: #ffffff;
+        background-color: #037ec6;
+        border-color: #037ec6;
+
+        &:hover {
+            background-color: #0094eb;
+            border-color: #0094eb;
+        }
+        &:active {
+            background-color: #0069a7;
+            border-color: #0069a7;
+        }
+    }
+
+
+    &--login {
+        color: #037ec6;
+        background-color: #ffffff;
+        border-color: #ffffff;
+        box-shadow: 3px 5px 16px 0px rgba(23, 50, 66, 0.75);
+    }
+
+    &:hover {
+        color: #ffffff;
+        background-color: #037ec6;
+        border-color: #037ec6;
+    }
+    &:active {
+        background-color: #0069a7;
+        border-color: #0069a7;
+        box-shadow: 0px 1px 4px 0px rgba(23, 50, 66, 0.75);
+    }
+}
