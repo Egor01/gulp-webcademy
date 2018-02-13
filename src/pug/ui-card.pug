@@ -1,0 +1,20 @@
+extends layouts/ui-layout.pug
+
+
+block variables
+  - var title = 'Карточка пост и портфолио'
+  - var pageClass = 'index-page'
+
+block content
+  section.section__ui
+    h1.heading__ui
+    .container
+      h3 Компоненты      
+      .row
+        .col-md-6 
+          h3.card_title Карточка - Пост в блоге 
+          +card-post('./img/bg/jared-erondu.png', 'Поездка в New York пример  длинного названия поста ...','#')
+
+        .col-md-6  Колонка 1
+          h3.card_title Карточка - Работа в портфолио
+          +card-portfolio('./img/bg/card_portfolio.jpg', 'Верстка Landing Page','#')
