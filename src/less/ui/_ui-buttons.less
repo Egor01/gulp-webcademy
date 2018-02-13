@@ -5,25 +5,34 @@
     font-weight: 700;
     text-decoration: none;
     text-align: center;
-    color:  #037ec6;
+    color:  @blue__color;
     padding: 14px 30px;
     margin-top: 20px; /* optional */
     margin-bottom: 20px; /* optional */
-    border-color: #dde8ee;
+    border-color: @lightgrey_color;
     border-style: solid;
     border-width: 2px;
     border-radius: 50px;
     transition: all 0.2s;
-    i {
-        padding-left: 8px;
-    }
 
     &:hover {
-        background-color: #dde8ee;
+        background-color: @lightgrey_color;
     }
     &:active {
-        background-color: #b4dff6;
-        border-color: #b4dff6;
+        background-color: @lightrey-blue_color;
+        border-color: @lightrey-blue_color;
+    }
+
+    &__icon--left {
+        margin-right: 10px;
+        float: left;
+        .clearfix();
+    }
+
+    &__icon--right {
+        margin-left: 10px;
+        float: right;
+        .clearfix();
     }
 
 
@@ -47,49 +56,49 @@
         font-size: 14px;
         color: #ffffff;
         padding: 9px 20px;
-        background-color: #b51919;
-        border-color: #b51919;
+        background-color: @red_color;
+        border-color: @red_color;
 
         &:hover {
-            background-color: #e70c0c;
-            border-color: #e70c0c;
+            background-color: @lightred_color;
+            border-color: @lightred_color;
         }
         &:active {
-            background-color: #990101;
-            border-color: #990101;
+            background-color: @darkred_color;
+            border-color: @darkred_color;
         }
     }
 
 
     &--save {
         color: #ffffff;
-        background-color: #037ec6;
-        border-color: #037ec6;
+        background-color: @blue__color;
+        border-color: @blue__color;
 
         &:hover {
-            background-color: #0094eb;
-            border-color: #0094eb;
+            background-color: @lightblue_color;
+            border-color: @lightblue_color;
         }
         &:active {
-            background-color: #0069a7;
-            border-color: #0069a7;
+            background-color: @darkblue_color;
+            border-color: @darkblue_color;
         }
     }
 
 
     &--login {
-        color: #037ec6;
+        color: @blue__color;
         background-color: #ffffff;
         border-color: #ffffff;
         box-shadow: 3px 5px 16px 0px rgba(23, 50, 66, 0.75);
         &:hover {
             color: #ffffff;
-            background-color: #037ec6;
-            border-color: #037ec6;
+            background-color: @blue__color;
+            border-color: @blue__color;
         }
         &:active {
-            background-color: #0069a7;
-            border-color: #0069a7;
+            background-color: @darkblue_color;
+            border-color: @darkblue_color;
             box-shadow: 0px 1px 4px 0px rgba(23, 50, 66, 0.75);
         }
     }

@@ -1,11 +1,7 @@
-
 include ../mixins/_mixins.pug
 include ../mixins/_buttons.pug
 include ../mixins/_comments-users.pug
 include ../mixins/_card.pug
-
-
-
 
 
 block variables
@@ -32,7 +28,7 @@ head
 	
 	//- styles
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&amp;subset=cyrillic" rel="stylesheet")
-		
+
 
 	<!-- build:cssCustom css/main.css -->
 	link(rel="stylesheet", href="css/main.css")
@@ -55,14 +51,12 @@ body(class=pageClass)
 	block scripts
 	<!-- endbuild -->
 	
+
 	//- scripts for cdn
 	block scripts
 		script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
 
-
-	
 	<!-- build:jsMain js/main.js -->
 	script(src="js/main.js")
 	<!-- endbuild -->
-
 	

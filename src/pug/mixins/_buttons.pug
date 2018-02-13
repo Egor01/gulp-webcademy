@@ -1,9 +1,15 @@
-mixin button(text, link, btnclass, icon)
+mixin button(text, link, btnclass, icon, left)
     if icon
-        a(href=link class="button " + btnclass)
-            | #{text}
-            i(class="fa " + icon)
-            
+        if left
+            a(href=link class="button " + btnclass)
+                | #{text}
+                span.button__icon--left
+                    i(class="fas " + icon)
+        else
+            a(href=link class="button " + btnclass)
+                | #{text}
+                span.button__icon--right
+                    i(class="fas " + icon)      
     else
         a(href=link class="button " + btnclass)
             | #{text}
