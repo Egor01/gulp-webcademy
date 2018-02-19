@@ -3,16 +3,10 @@ div.content
         div.section_ui-header-base
             include ../modules/logo.pug
             include ../modules/header-nav.pug
-        div.section_ui-header__user
-            div.section_ui-header__user-photo
-                img(src="../img/ui-header/photo-admin.png",alt="")
-            div.section_ui-header__user-info
-                div.section_ui-header__user-info-name
-                    |Юрий Ключевский
-                div.section_ui-header__user-info-desc
-                    |Пользователь
-                div.section_ui-header__user-info-login
-                    div.section_ui-header__user-info-login-button
-                        |Профиль
-                    div.section_ui-header__user-info-login-button
-                        |Выход
+        div.section_ui-header__login
+            div.section_ui-header__login-new
+                a(href="registration.html")
+                    |Регистрация
+            div.section_ui-header__login-login
+                a(href="login.html")
+                    |Вход

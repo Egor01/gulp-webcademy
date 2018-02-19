@@ -1,0 +1,42 @@
+extends layouts/reg-log-layout.pug
+
+block variables
+    - var title = 'Авторизация'
+
+
+block content
+    div.content
+        div.reglog
+            div.reglog__header
+                a(href="index.html").reglog__header-logo
+                    i(class="far fa-paper-plane")
+                    |Супер Сайт
+                div.reglog__header-action
+                    a(href="registration.html")
+                        |Регистрация
+            div.reglog__form-block
+                form(class="reglog__form" method = "POST", action = "#", id ="form-enter")
+                    div.reglog__form-heading
+                        h1
+                            |Вход на сайт
+                    div(class="reglog__form-errors")
+                        +input_email_error("Введите email")
+                    div(class="reglog__form-errors ")
+                        +input_email_error("Введите пароль")
+                    div(class="reglog__form-errors")
+                        +wrong_emailorPass("Неверный email или пароль")
+                    input(class="reglog__form-field" type="text" placeholder="E-mail")
+                    input(class="reglog__form-field" type="password" placeholder="Пароль")
+                    div.reglog__form-buttons
+                        +button('Войти','#', 'button--login')
+            footer.reglog__footer
+                div.footer__copyright
+                    p
+                        |© TRUE CODER
+                    p
+                        |Создано с
+                        i(class="fas fa-heart")
+                        |в 
+                        a(href="http://webcademy.ru/webdev/")
+                            |WebCademy.ru
+                        |в 2018 году
