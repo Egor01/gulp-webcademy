@@ -1,0 +1,77 @@
+extends layouts/ui-layout.pug
+
+block variables
+    - var title = 'UI Forms'
+    - var value_tetxarea = 'Йосемити, круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы.'
+
+block content
+    section.section_ui
+    div.content 
+      div(class="form-header") 
+        | Элементы формы
+      div(class="form-all__input")  
+        div(class="label_form__input-text" )
+          label(for="ui-form__input_text")
+            | Поле для ввода 
+        div(class="form-item__input-text")
+          input(type="text" name="ui-form__input_text"   placeholder="Введите имя")
+          
+      div(class="form-all__input")  
+        div(class="label_form__input-text" )
+          label(for="ui-form__input-text--maxwidth")
+            | Поле на всю ширину 
+        div(class="form-item__input-text--maxwidth")
+          input(type="text" name="ui-form__input_text--maxwidth"  value="Национальный парк Йосемити")
+          
+      div(class="form-all__input") 
+        div(class="label-form__input_text")     
+          label(for=name="form-ui-comment" )
+            | Сообщение - TextArea 
+        div(class="ui-textarea")
+            textarea(name="form-uicomment" cols="2" rows="10")
+              | #{value_tetxarea}
+
+      div(class="ui-file")
+        div(class="ui-file__header")
+          | Фотография
+        div(class="ui-file__label")
+          | Изображение jpg или png, размером больше чем 100x100 пикселей, весом до 2МБ.
+        input(type="file"  name="file" id="file" class="inputfile"  multiple)
+        label(for="file")
+          | Выбрать файл 
+        span
+          | Файл не выбран
+
+      div(class="ui-file")
+        div(class="ui-file__header")
+          | Фотография
+        div(class="ui-file__label")
+          | Изображение jpg или png, размером больше чем 100x100 пикселей, весом до 2МБ.
+        input(type="file"  name="file-2" id="file-2" class="inputfile"  multiple)
+        label(for="file-2")
+          | Выбрать файл 
+        span(class=)
+          | Файл не выбран
+
+      div(class="ui-file")
+        div(class="ui-file__header")
+          | Фотография
+        div(class="ui-file__label")
+          | Изображение jpg или png, размером больше чем 100x100 пикселей, весом до 2МБ.
+        input(type="file"  name="file-3" id="file-3" class="inputfile"  multiple)
+        label(for="file-3")
+          | Выбрать файл 
+        span
+          | tree.jpg    
+        div(class="ui-file-image")
+          img(class="ui-file-image__item" src="img/bg/forest.jpg" alt="" width="100%" height="100%" )
+          div(class="ui-file-image__button")
+            +button('Удалить','#', 'button--delete')
+        
+         
+
+
+        
+
+
+
