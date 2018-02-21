@@ -6,10 +6,11 @@
        display: block;
 	position: relative;
 	cursor: pointer;
-	font-size: 16px;
-	padding-left: 30px;
-    margin-left: 20px;
-    width: 176px;
+    color: #FFF;
+        p {
+            margin: 0;
+        }
+    margin-left: 30px;
     
  }
 .checkbox__block input {
@@ -19,14 +20,19 @@
 }
 .checkmark {
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 0px;
+    left: -30px;
     height: 20px;
     width: 20px;
     background-color: @superdarkblue_color;
     -webkit-border-radius: 3px;
             border-radius: 3px;
+    
+        @media(min-width: 768px){
+            top: 5px;
+        }
     }
+
     .checkmark:after {
     content: "";
     position: absolute;

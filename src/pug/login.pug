@@ -27,8 +27,14 @@ block content
                         +wrong_emailorPass("Неверный email или пароль")
                     input(class="reglog__form-field" type="text" placeholder="E-mail")
                     input(class="reglog__form-field" type="password" placeholder="Пароль")
+                    div.reglog__form-remember-block
+                        div.reglog__form-remember
+                            +checkbox("Запомнить меня")
+                        div.reglog__form-remember-pass
+                            a(href="#")
+                                |забыл пароль
                     div.reglog__form-buttons
-                        +button('Войти','#', 'button--login')
+                        +buttons-reglog("Войти")
             footer.reglog__footer
                 div.footer__copyright
                     p

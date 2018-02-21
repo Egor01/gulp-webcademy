@@ -90,6 +90,7 @@
   	background-color: rgba(18, 45, 61, 0.6);
   	box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.004);
   	
+  	
   	@media(min-width: 500px){
   		width: 360px;
   	}
@@ -118,9 +119,28 @@
 	outline: none;
 }
 
+.reglog__form-remember-block {
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: center;
+       		align-items: center;
+	margin-bottom: 30px;
+}
+
+
+.reglog__form-remember-pass a {
+	color: #FFF;
+}
+
+
 .reglog__form-buttons {
 	text-align: center;
 	cursor: pointer;
+	
+		button {
+			margin: 0;
+		}
 }
 
 // подвал сайта
@@ -146,3 +166,6 @@
 .visible-error {
 	display: block;
 }
+
+
+
