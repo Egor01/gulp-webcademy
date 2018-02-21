@@ -14,3 +14,8 @@ mixin button(text, link, btnclass, icon, left)
     else
         a(href=link class="button " + btnclass)
             | #{text}
+
+
+mixin buttons-reglog(text)
+    button(class="button button--login" type="submit" value="")
+        |#{text}
