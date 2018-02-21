@@ -117,6 +117,10 @@
 	border-style: none;
 	margin-bottom: 20px;
 	outline: none;
+	
+	&--mb30 {
+		margin-bottom: 30px;
+	}
 }
 
 .reglog__form-remember-block {
@@ -136,10 +140,10 @@
 
 .reglog__form-buttons {
 	text-align: center;
-	cursor: pointer;
 	
 		button {
 			margin: 0;
+			cursor: pointer;
 		}
 }
 
@@ -159,7 +163,18 @@
 	}
 }
 
-.reglog__form-errors {
+.reglog__form-errors-email {
+	display: none;
+}
+
+.reglog__form-errors-pass {
+	display: none;
+}
+.reglog__form-errors-email-busy {
+	display: none;
+}
+
+.reglog__form-errors-email-wrong {
 	display: none;
 }
 

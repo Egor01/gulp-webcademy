@@ -15,18 +15,18 @@ block content
                     a(href="login.html")
                         |Войти
             div.reglog__form-block
-                form(class="reglog__form" method = "POST", action = "#", id ="form-enter")
+                form(class="reglog__form" method = "POST", action = "#", id ="form-reg")
                     div.reglog__form-heading
                         h1
                             |Регистрация
-                    div(class="reglog__form-errors")
+                    div(class="reglog__form-errors-email")
                         +input_email_error("Введите email")
-                    div(class="reglog__form-errors ")
+                    div(class="reglog__form-errors-pass")
                         +input_email_error("Введите пароль")
-                    div(class="reglog__form-errors")
+                    div(class="reglog__form-errors-email-busy")
                         +email_busy(" Данный email уже занят ")
-                    input(class="reglog__form-field" type="text" placeholder="E-mail")
-                    input(class="reglog__form-field" type="password" placeholder="Пароль")
+                    input(class="reglog__form-field" type="text" placeholder="E-mail" data-email="email")
+                    input(class="reglog__form-field reglog__form-field--mb30" type="password" placeholder="Пароль" data-pass="pass")
                     div.reglog__form-buttons
                         +buttons-reglog("Регистрация")
             footer.reglog__footer
