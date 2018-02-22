@@ -127,7 +127,7 @@
 	        border-radius: 5px;
 	padding: 20px;
 	
-	
+
 	@media(min-width: 768px){
 		background-color: @grayUltraLight__color;
 	}
@@ -144,7 +144,7 @@
 			line-height: 1.5;
 		}
 
-		span {
+		span a {
 			color: #000;
 			margin-bottom: 5px;
 		}
@@ -153,6 +153,11 @@
 		-webkit-flex-direction: row;
 		    -ms-flex-direction: row;
 		        flex-direction: row;
+	}
+
+	.message__user-block-email {
+		vertical-align: middle;
+		color: @blue__color;
 	}
 }
 
@@ -171,25 +176,24 @@
 	color: #000;
 }
 
-.message__user-block-email {
-	vertical-align: middle;
-	color: @blue__color;
-}
+
 
 .message__user-block-file {
 	margin-right: 20px;
 }
 
-.message__user-button-top {
+.message__user-button-top a {
 	display: none;
+	color: #FFF;
 	
 	@media(min-width: 768px){
 		display: block;
 	}
 }
 
-.message__user-button-bottom {
+.message__user-button-bottom a{
 	margin-top: 20px;
+	color: #FFF;
 	
 	@media(min-width: 768px){
 		display: none;

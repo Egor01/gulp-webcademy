@@ -1,9 +1,12 @@
-include ../mixins/_mixins.pug
+include ../mixins/_buttons.pug
+include ../mixins/_comments-users.pug
+include ../mixins/_card.pug
+include ../mixins/_elements.pug
 
 block variables
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
 head
 	meta(charset="UTF-8")
 	title #{title}
@@ -18,8 +21,12 @@ head
 	meta(name="description" content="")
 	
 	<!-- build:cssVendor css/vendor.css -->
+	link(rel="stylesheet", href="libs/normalize-css/normalize.css")
 	link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
 	<!-- endbuild -->
+
+	//- styles for cdn
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&amp;subset=cyrillic" rel="stylesheet")
 
 	<!-- build:cssCustom css/main.css -->
 	link(rel="stylesheet", href="css/main.css")
@@ -31,8 +38,7 @@ head
 	
 body(class=pageClass)
 	include ../modules/header.pug
-	include ../modules/nav.pug
-	
+
 	block content
 
 	include ../modules/footer.pug
@@ -44,6 +50,11 @@ body(class=pageClass)
 	<!-- build:jsVendor js/vendor.js -->
 	block scripts
 	<!-- endbuild -->
+
+	//- scripts for cdn
+	block scripts
+		script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+
 	
 	<!-- build:jsMain js/main.js -->
 	script(src="js/main.js")

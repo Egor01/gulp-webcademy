@@ -1,0 +1,40 @@
+mixin user_profile (name)
+	.user_profile
+		p #{name}
+
+mixin checkbox (title)
+	label(class="checkbox__block")
+		p #{title}
+		input(type="checkbox")
+		span(class="checkmark")
+
+mixin avatar_big(img)
+	.avatar_big
+		img(src= img)
+
+mixin avatar_small(img)
+	.avatar_small
+		img(src= img)
+
+mixin input_email_error(error_email_message)
+	.input_email_error.
+			#{error_email_message}
+
+mixin empty_comment_error(error_message_empty)
+	.empty_comment_error.
+			#{error_message_empty}
+
+mixin email_busy(error_title)
+	.email_busy
+		.title.
+			#{error_title}
+		.artical
+			p Используйте другой email чтобы создать новый аккаунт.
+			p Или воспользуйтесь <a href="#">восстановлением пароля,</a> чтобы войти на сайт.
+
+mixin wrong_emailorPass(error_title)
+	.wrong_emailPass
+		.title.
+			#{error_title}
+		.artical
+			p Введите верные данные для входа или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.
