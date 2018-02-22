@@ -1,16 +1,15 @@
 
 .form-header{
-	padding: 20px;
+	padding: 50px 20px 20px 50px;
     font-size: 32px;
-	font-weight: 600;
+	font-weight: 400;
 
 }
 
 
 .form-all__input {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-bottom: 20px;
 	//border: solid 2px ;
 	display: flex;
 	flex-direction: column;
@@ -23,21 +22,20 @@
 
 
 .label_form__input-text{
-	font-size: 16px;
-	font-weight: 600;
+	font-size: 15px;
+	font-weight: 800;
 	//border: solid 2px red;
 }
 
 input[type="text"]
 {
-    margin: 10 px;
+     padding: 20px;
     font-size: 16px;
-	font-weight: 350;
+	font-weight: 400;
     height: 30px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
-    text-indent: 10px;
-    // border: 2px solid
+    border: 1px solid gainsboro;
 }
 
 .form-item__input-text--maxwidth input[type="text"]
@@ -47,20 +45,16 @@ input[type="text"]
 
 .ui-textarea{
     width:100%;
+    font-size: 16px;
+	font-weight: 600;
 }
 
 textarea {
+	border: 2px solid gainsboro;
+	border-radius: 4px;
     width:100%;
     font-size: 16px;
-	font-weight: 350;
-}
-
-
-.ui-file
-{
-
-  padding: 20px;
-
+	font-weight: 400;
 }
 
 
@@ -91,40 +85,50 @@ cursor:pointer;
 } 
 
 
+.ui-file{
+
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
 .ui-file__header {
 	font-size: 16px;
 	font-weight: 800;
 }
 
-
 .ui-file__label {
 	color: #1F2223;
 }
 
-
-
-
-.ui-file-image{
-    padding: 10px;
-	position: relative;
-	width: 300px;
-	height: 300px;
-	overflow: auto;
-    background: url("img/bg/car.jpg") no-repeat ;
-    z-index: 5;
+.ui-file__file-name{
+	padding-left: 10px;
 }
 
+
+.ui-file__image{
+    padding-top: 10px;
+    padding-left: 0px;
+	position: relative;
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+    z-index: 5;
+
+
+}
+
+/*
 .ui-file-image__item{
 	  position: absolute;
       z-index: -1;
 }
-
+*/
 
 .ui-file-image__button{
-	  position: relative;
-	  top: 220px; 
-	  left: 170px;
-      z-index: 1;
+	  position: absolute;
+	  top: 70%; 
+	  left: 60%;
+      z-index: 10;
 }
 
 
