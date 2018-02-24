@@ -22,11 +22,11 @@ block content
                     div(class="reglog__form-errors")
                         +input_email_error("Введите email")
                     div(class="reglog__form-errors ")
-                        +input_email_error("Введите пароль")
+                        +input_password_error("Введите пароль")
                     div(class="reglog__form-errors")
                         +wrong_emailorPass("Неверный email или пароль")
-                    input(class="reglog__form-field" type="text" placeholder="E-mail")
-                    input(class="reglog__form-field" type="password" placeholder="Пароль")
+                    input(class="reglog__form-field" id="reglog__input-email" type="email" placeholder="E-mail")
+                    input(class="reglog__form-field" id="reglog__input-password" type="password" placeholder="Пароль")
                     div.reglog__form-remember-block
                         div.reglog__form-remember
                             +checkbox("Запомнить меня")
