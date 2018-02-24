@@ -37,7 +37,8 @@ mixin message__user(date, name, email, message, file)
                 |#{message}
         div.message__user-block
             span.message__user-block-file
-                |<strong>Прикрепленные файлы:<strong>
+                strong
+                    |Прикрепленные файлы:
             a(href="#")
                 |#{file}
         div.message__user-block
