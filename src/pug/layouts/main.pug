@@ -2,6 +2,7 @@ include ../mixins/_buttons.pug
 include ../mixins/_comments-users.pug
 include ../mixins/_card.pug
 include ../mixins/_elements.pug
+include ../modules/admin-nav.pug
 
 block variables
 
@@ -37,7 +38,9 @@ head
 	<![endif]-->
 	
 body(class=pageClass)
-	include ../modules/header.pug
+
+	//- include ../modules/header.pug
+
 
 	block content
 

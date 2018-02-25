@@ -1,0 +1,33 @@
+mixin header-menu(navClass)
+ if(navClass  'header-user__nav')
+  nav(Class=navClass)
+   ul
+    each link in menu
+     li
+      a{href=link.href}=link.linkName
+  else
+   .menu-admin
+    .tab-profile
+     +avatar("small", 'img/avatar-img/photo-small.jpg', 'Админ')
+     .tab-profile__name Юрий Ключевский
+     +btn('#', 'admin', 'Администратор')
+     .tab-wrap
+      input(type='radio' name="tabs" id="tab1" checked)
+      .tab-label=content#tab1=content
+       label(for='tab1') Страницы
+       nav.header-user__nav
+        ul
+          each link in menu
+            li
+              a{href=link.href}=link.linkName
+         input(type='radio' name='tabs' id='tabs2') 
+         .tab-label-content#tab2-content
+          label(for='tab2') Админka    
+          nav(Class=navClass) 
+           ul
+            each link in menu
+             li
+              i(class='fas fa-' +item.clasIcon)
+              aa{href=item.href}=item.linkName
+
+
