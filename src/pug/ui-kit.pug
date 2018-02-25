@@ -284,6 +284,66 @@ block content
 
                             "Avrora-platform.pdf" )
 
+
+
+
+    //- формы ================================================================
+
+    section.section__ui#ui-forms
+    h1.heading__ui
+        | Элементы формы
+    div.container
+        div.content
+            div.row
+                div(class="col")
+                    div.forms-group__field
+                        div.forms-group__block
+                            label(for="form-field")
+                                |Поле для ввода
+                        div.forms-group__block
+                            input(type="text" id="form-field" placeholder="Введите имя")
+
+                    div(class="forms-group__field forms-group__field--all-width")
+                        div.forms-group__block
+                            label(for="form-field")
+                                |Поле навсю ширину
+                        div.forms-group__block
+                            input(type="text" id="form-field" placeholder="Введите ...")
+
+                    div(class="forms-group__message")
+                        div.forms-group__block
+                            label(for="form-field")
+                                |Сообщение - Textarea
+                        div.forms-group__block
+                            textarea(type="text" id="form-field" placeholder="Введите ...")
+
+                    div(class="forms-group__file")
+                        div.forms-group__block-file
+                            span
+                                strong
+                                    |Фотография
+                            span
+                                |Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+                        input(type="file" id="file" class="inputfile" name="file" data-multiple-caption="{count} файлов выбрано" multiple)
+                        label(for="file")
+                            |выбрать файл
+                        span
+                            |файл не выбран
+
+                    div(class="forms-group__file")
+                        div.forms-group__block-file
+                            span
+                                strong
+                                    |Изображение 
+                            span
+                                |Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+                        input(type="file" id="file-2" class="inputfile" name="file" data-multiple-caption="{count} файлов выбрано" multiple)
+                        label(for="file-2")
+                            |выбрать файл
+                        span
+                            |файл не выбран
+
+
     
 
     //- Подвал сайта =========================================================
