@@ -1,24 +1,36 @@
- @mixin "ui_ui-footer.less";
- 
 
-.container__work-desc span {
-	font-weight: bold;
-	font-size: 28px;
-}
 .container__work-desc {
-	font-size: 24px;
+	 padding: 10px;
+	 padding-left: 75px;
+	 padding-right: 52px;
+ 
+ 		 @media (min-width: 770px){	
+  font-size: 28px;
 	margin-bottom: 50px;
-	margin-left: 64px;
+	margin-left: 50px;
 	margin-top: 70px;
-	
-
+	display: flex;
+	justify-content: space-between;
+     }
 }
 .button--edit {
-	margin-left: 244px;
-  /* margin-right: 20px;*/
-	 font-size: 14px;
+   
+  
+ 	 font-size: 14px;
 	 padding: 9px 20px;
-	 font-weight: 600;		
+	 font-weight: 50%;	
+
+	 @media (min-width: 770px){	
+   margin-right: 0px;
+   margin-top: 0px;
+ 	 font-size: 14px;
+	 padding: 10px 20px;
+	 padding-top: 10px;
+	
+}
+.title {
+
+}
 }
 .row {
 	margin-left: 50px;

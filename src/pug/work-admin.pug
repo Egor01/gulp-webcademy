@@ -8,30 +8,28 @@ block variables
 
 
 block content
-
- 
-  section.section__ui
-        h1.heading__ui
  
   .container__work-desc
-     h2 
-     | <span>Работы</span> которые сделал я и моя командa
-     +button('Добавить работу','#', 'button--edit', 'fa-arrow-left', 'left') 
-  div.row
+    .title
+     | <strong>Работы</strong> которые сделал я и моя командa
+    .button__admin
+      +button('Добавить работу','#', 'button--edit', 'fa-arrow-left', 'left')
+  .container__card     
+   div.row
       div(class="col-sm-6 col-md-6 col-lg-4")
         +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#') 
       div(class="col-sm-6 col-md-6 col-lg-4")  
         +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')
       div(class="col-sm-6 col-md-6 col-lg-4")
         +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
-  div.row
+   div.row
      div(class="col-sm-6 col-md-6 col-lg-4")
        +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')       
      div(class="col-sm-6 col-md-6 col-lg-4")
        +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')       
      div(class="col-sm-6 col-md-6 col-lg-4")
        +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')       
-  div.row
+   div.row
      div(class="col-sm-6 col-md-6 col-lg-4")
        +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')              
      div(class="col-sm-6 col-md-6 col-lg-4")
