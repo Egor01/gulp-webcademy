@@ -1,0 +1,26 @@
+extends layouts/main-admin.pug
+
+
+block content
+    section(class="content content--margin-sections")
+        div.container
+            div.row
+                div.col-12.blog-add-post__section
+                    h1.blog-add-post__heading-mb
+                        |Добавить пост
+                div.col-12.blog-add-post__section
+                    +form__field("Название", "name-blog-post", "Введите имя", "allWidth")
+                div.col-12.blog-add-post__section
+                    +form__file("Изображение",
+                                "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.",
+                                "upload-img",
+                                "Выбрать файл"
+                                )
+                div.col-12.blog-add-post__section
+                    +form__message("Содержание", "msg-blog-post", "Введите город...")
+                div.col-12.blog-add-post__section
+                    div.blog-add-post__btn-block
+                        div.blog-add-post__btn-block-left
+                            +button('Сохранить','#', 'button--save')
+                        div.blog-add-post__btn-block-right
+                            +button('Отмена','#', '')
