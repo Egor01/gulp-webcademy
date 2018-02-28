@@ -1,0 +1,40 @@
+//- поле ввода
+mixin form__field(label, id, placeholder, allWidth)
+    if allWidth
+        div.forms-group__field.forms-group__field--all-width
+            div.forms-group__block
+                label(for=id)
+                    |#{label}
+            div.forms-group__block
+                input(type="text", id=id, placeholder=placeholder)
+    else
+        div.forms-group__field
+            div.forms-group__block
+                label(for=id)
+                    |#{label}
+            div.forms-group__block
+                input(type="text", id=id, placeholder=placeholder)
+
+//- сообщение
+mixin form__message(label, id, placeholder)
+    div(class="forms-group__message")
+        div.forms-group__block
+            label(for="form-field")
+                |#{label}
+        div.forms-group__block
+            textarea(type="text", id=id, placeholder=placeholder)
+
+//- загрузка файла
+mixin form__file(title, desc, id, label)
+    div(class="forms-group__file")
+        div.forms-group__block-file
+            span
+                strong
+                    |#{title}
+            span
+                |#{desc}
+        input(type="file" id=id class="inputfile" name="file" data-multiple-caption="{count} файлов выбрано" multiple)
+        label(for=id)
+            |#{label}
+        span
+            |файл не выбран
