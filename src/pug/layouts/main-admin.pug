@@ -2,6 +2,7 @@ include ../mixins/_buttons.pug
 include ../mixins/_comments-users.pug
 include ../mixins/_card.pug
 include ../mixins/_elements.pug
+include ../mixins/_forms.pug
 
 block variables
 
@@ -36,9 +37,12 @@ html(lang="ru")
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
 		
-	body
+	body(class=pageClass)
+		include ../modules/admin-header.pug
+
 		block content
 
+		include ../modules/footer.pug
 
 		<!-- build:jsLibs js/libs.js -->
 		script(src="libs/jquery/jquery.min.js")

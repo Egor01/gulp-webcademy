@@ -48,6 +48,10 @@ gulp.task('server', function() {
 	watch('./src/img/svg/*.svg', function(){
 		gulp.start('svg');
 	});
+
+	watch('./src/js/*.js', function(){
+		gulp.start('js');
+	});
 });
 
 gulp.task('server:docs', function() {
@@ -121,6 +125,12 @@ gulp.task('svg', function() {
 	.pipe(gulp.dest('./build/img'));
 });
 
+gulp.task('js', function(){
+	return gulp.src('./src/js/*.js')
+	.pipe(gulp.dest('./build/js'))
+	.pipe(browserSync.stream());
+});
+
 gulp.task('copy:libs', function(callback) {
    
     gulp.src('node_modules/jquery/dist/**/*.*')
@@ -163,7 +173,7 @@ gulp.task('copy:build:files', function(callback) {
 gulp.task('default', function(callback){
     runSequence(
     	'clean:build',
-    	['styles', 'pug', 'svg', 'copy:libs', 'copy:img', 'copy:js'],
+    	['styles', 'pug', 'svg', 'js', 'copy:libs', 'copy:img', 'copy:js'],
     	'server',
 		callback
     )
