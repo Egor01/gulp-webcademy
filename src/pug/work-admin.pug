@@ -9,34 +9,31 @@ block variables
     include ./modules/admin-header.pug
 
 block content
- 
-      .container__work-desc
-        .title
-         | <strong>Работы</strong> которые сделал я и моя командa
-        .button__admin
-          +button('Редактировать','#', 'button--edit', '', 'left')
-      .container__card     
-       div.row
-          div(class="col-sm-6 col-md-6 col-lg-4")
-            +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#') 
-          div(class="col-sm-6 col-md-6 col-lg-4")  
-            +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')
-          div(class="col-sm-6 col-md-6 col-lg-4")
-            +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
-       div.row
-         div(class="col-sm-6 col-md-6 col-lg-4")
-           +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')       
-         div(class="col-sm-6 col-md-6 col-lg-4")
-           +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')       
-         div(class="col-sm-6 col-md-6 col-lg-4")
-           +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')       
-       div.row
-         div(class="col-sm-6 col-md-6 col-lg-4")
-           +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')              
-         div(class="col-sm-6 col-md-6 col-lg-4")
-           +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')       
-         div(class="col-sm-6 col-md-6 col-lg-4")
-           +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')      
-      include ./modules/footer.pug
+  .container
+    .container__work-desc
+      .title
+       | <strong>Работы</strong> которые сделал я и моя командa
+      .button__admin
+        +button('Редактировать','#', 'button--edit', '', 'left')
+    .row
+      div(class="col-sm-6 col-md-6 col-lg-4")
+        +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#') 
+      div(class="col-sm-6 col-md-6 col-lg-4")  
+        +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')
+      div(class="col-sm-6 col-md-6 col-lg-4")
+        +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')       
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')       
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')       
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#') 
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#') 
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
+  include ./modules/footer.pug
 
         
