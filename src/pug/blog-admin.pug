@@ -51,10 +51,11 @@ block content
 
     div(class="content content--margin-sections")
         div.container
-            div.row.d-md-flex.justify-content-between.mb-4.mx-1
+            .section-header
                 h1 
                     |Блог веб-разработчика
                 +button('Добавить пост','#', 'button--edit', '', '')
+            //- +button('Редактировать','#', 'button--edit', 'fa-arrow-left', 'left')
             div.row
                 div(class="col-sm-6 col-md-6 col-lg-4")
                     +card-post('./img/blog/blog-3.jpg', 'Поездка в New York','#','button')
