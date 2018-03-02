@@ -1,0 +1,51 @@
+extends layouts/main-admin.pug
+
+block variables
+	- var title = "Post"
+	- var post_title = "Национальный парк Йосемити"
+	- 
+		var post_links = [
+			{name: 'Емельян Казаков', link: '#', class_name:'post-links-name'},
+			{name: 'Путешествия', link: '#', class_name:'post-links-event'},
+			{name: '16 марта 2017', link: '#', class_name:'post-links-date'},
+			{name: '2 комментария', link: '#', class_name:'post-links-comments'},
+			];
+
+block content
+	.container
+		.post-title
+			h1.
+				#{post_title}
+			+button('Редактировать','#', 'button--edit post-button__edit')
+		.post-links
+			ul
+				each item in post_links
+					li
+						a(href=item.link,class= item.class_name)= item.name				
+		.park-image
+		.text__park_description
+			p Парк находится в горах #[a(href="#") Сьерра-Невада] на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов.
+			p Центром парка является долина #[a(href="#") Йосемити], круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками.
+		.btn-container
+			+button('Назад','#','','fa-arrow-left','left')
+			+button('Вперед','#','', 'fa-arrow-right')
+	
+	div.container
+		div.content
+			h2.heading__2
+				|2 комментария
+			div.row
+				div(class="col-12")
+					+comment__user("img/avatar/avatar-user.png", "avatar-user", "Джон До", "05 мая 2017 года в 15:45", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+					+comment__user("img/avatar/avatar-user2.png", "avatar-user", "Джон До", "05 мая 2017 года в 15:45", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+	.container
+		.row
+			.col-12
+				.comment-post__title Оставить комментарий
+				.comment-post
+							+avatar_small('/img/avatar/foto-small-2.png')
+							.comment-post__author Юрий Ключевский
+							.comment-post__form
+								+empty_comment_error('Комментарий не можетt быть пустым.')
+								textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
+								+button('Опубликовать','#', '')
