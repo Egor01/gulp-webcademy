@@ -1,0 +1,45 @@
+div.section_ui-header-admin
+    div.section_ui-header-admin-photo
+        img(src="../img/ui-header/photo-admin.png",alt="")
+    div.section_ui-header-admin-info
+        div.section_ui-header-admin-name  
+            |Юрий Ключевский
+        div.section_ui-header-admin-desc
+            |Администратор  
+    div.section_ui-header-admin-menu
+        div.menu-begin
+            ul
+                li
+                    a(href="#")
+                        div.menu-icon
+                            i(class="fas fa-plus-circle")
+                        |Пост
+                li      
+                     a(href="#")
+                        div.menu-icon
+                          i(class="fas fa-plus-circle")
+                        |Работа
+                li      
+                    a(href="#")
+                        div.menu-icon
+                            i(class="fas fa-edit")
+                        |Обо мне
+                li          
+                    a(href="#")
+                        div.menu-icon
+                             i(class="fas fa-edit")
+                        |Контакты
+                li      
+                    a(href="#")
+                        div.menu-icon
+                           i(class="fas fa-envelope")
+                        |Сообщения
+    div.menu-end
+        a(href="#")
+            div.menu-icon
+                i(class="fas fa-sign-out-alt")
+            |Выход
+div.section_ui-header
+     div.section_ui-header-base
+         include logo.pug
+         include header-nav.pug

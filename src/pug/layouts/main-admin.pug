@@ -2,6 +2,7 @@ include ../mixins/_buttons.pug
 include ../mixins/_comments-users.pug
 include ../mixins/_card.pug
 include ../mixins/_elements.pug
+include ../mixins/_forms.pug
 
 block variables
 
@@ -10,19 +11,16 @@ html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		title #{title}
-
-
+		
 		<!--[if IE]>
 		meta(http-equiv='X-UA-Compatible', content="IE=edge")
 		<![endif]-->
 
 		meta(name="viewport" content="width=device-width,initial-scale=1")
-
 		
 		meta(name="keywords" content="")
 		meta(name="description" content="")
 		
-
 		<!-- build:cssVendor css/vendor.css -->
 		link(rel="stylesheet", href="libs/normalize-css/normalize.css")
 		link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
@@ -38,10 +36,13 @@ html(lang="ru")
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
+		
+	body(class=pageClass)
+		include ../modules/admin-header.pug
 
-	body
 		block content
 
+		include ../modules/footer.pug
 
 		<!-- build:jsLibs js/libs.js -->
 		script(src="libs/jquery/jquery.min.js")
@@ -55,8 +56,10 @@ html(lang="ru")
 		block scripts
 			script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
 
-	
-	
+		
 		<!-- build:jsMain js/main.js -->
 		script(src="js/main.js")
 		<!-- endbuild -->
+
+
+	
