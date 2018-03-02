@@ -1,0 +1,14 @@
+extends layouts/main.pug
+
+block content
+	.container
+		.row
+			.col-12
+				.comment-post__title Оставить комментарий
+				.comment-post
+							+avatar_small('/img/avatar/foto-small-2.png')
+							.comment-post__author Юрий Ключевский
+							.comment-post__form
+								+empty_comment_error('Комментарий не можетt быть пустым.')
+								textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
+								+button('Опубликовать','#', '')
