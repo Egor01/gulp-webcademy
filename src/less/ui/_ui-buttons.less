@@ -1,11 +1,11 @@
-.button {
+.button, a.button {
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
     color:  @blue__color;
-    padding: 14px 30px;
+    padding: 11px 30px;
     border-color: @lightgrey_color;
     border-style: solid;
     border-width: 2px;
@@ -30,12 +30,10 @@
         float: right;
     }
 
-
     &--edit {
         color: #ffffff;
         background-color: #ffba00;
         border-color: #ffba00;
-
         &:hover {
             background-color: #ffcf3e;
             border-color: #ffcf3e;
@@ -44,8 +42,10 @@
             background-color: #f29a00;
             border-color: #f29a00;
         }
+        a {
+            color:#fff!important
+        }
     }
-
 
     &--delete {
         font-size: 14px;
@@ -63,7 +63,6 @@
             border-color: @darkred_color;
         }
     }
-
 
     &--save {
         color: #ffffff;
