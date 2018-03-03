@@ -17,7 +17,9 @@ block content
                                 "Выбрать файл"
                                 )
                     div.forms-group__file-img
-                        img(src="../../img/bg/yosemite-park.jpg", alt="")
+                        img(src="../img/bg/park2.jpg", alt="")
+                        div.forms-group__file-img-bt-remove
+                            +button('Удалить','#', 'button--delete', 'fa-trash-alt')
                 div.col-12.blog-post-admin__section
                     +form__message("Содержание", "msg-blog-post", "Редактировать сообщение...")
                 div.col-12.blog-post-admin__section
