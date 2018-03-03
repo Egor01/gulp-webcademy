@@ -1,11 +1,20 @@
 .post-title{
 	margin-top: 70px;
 	margin-bottom: 0;
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+.post-button__edit {
+	height: 100%;
+	margin-top: 15px;
+ order:2;
+}
 }
 
 .post-title h1 {
 	font-size: 28px;
 	font-weight: 800;
+	order: 1
 }
 
 .post-links {
@@ -62,6 +71,15 @@
 }
 
 @media (max-width: 768px){
+	.post-title {
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+	.post-button__edit{
+		margin-top: 0;
+		width: 50%;
+	}
+	}
 	.post-links{
 		margin-top: 20px;
 		li{
@@ -74,6 +92,7 @@
 	.park-image{
 		height: 400px;
 	}
+
 }
 
 @media (max-width: 467px){
