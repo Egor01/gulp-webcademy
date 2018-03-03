@@ -1,0 +1,28 @@
+extends layouts/main-admin.pug
+
+
+block content
+    section(class="content content--margin-sections")
+        div.container
+            div.row
+                div.col-12.blog-post-admin__section
+                    h1.blog-post-admin__heading-mb
+                        |Редактировать пост
+                div.col-12.blog-post-admin__section
+                    +form__field("Название", "name-blog-post", "Редактировать имя...", "allWidth")
+                div.col-12.blog-post-admin__section
+                    +form__file("Изображение",
+                                "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.",
+                                "upload-img",
+                                "Выбрать файл"
+                                )
+                    div.forms-group__file-img
+                        img(src="../../img/bg/yosemite-park.jpg", alt="")
+                div.col-12.blog-post-admin__section
+                    +form__message("Содержание", "msg-blog-post", "Редактировать сообщение...")
+                div.col-12.blog-post-admin__section
+                    div.blog-post-admin__btn-block
+                        div.blog-post-admin__btn-left
+                            +button('Сохранить','#', 'button--save')
+                        div.blog-post-admin__btn-right
+                            +button('Отмена','#', '')
