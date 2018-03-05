@@ -1,0 +1,35 @@
+extends layouts/main.pug
+
+
+block variables
+  - var title = 'Работы-гость'
+  - var pageClass = 'work-guest'
+
+
+  
+block content
+  .container
+    .container__work-desc
+      .title
+       | <strong>Работы</strong> которые сделал я и моя командa
+    .row
+      div(class="col-sm-6 col-md-6 col-lg-4")
+        +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#') 
+      div(class="col-sm-6 col-md-6 col-lg-4")  
+        +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')
+      div(class="col-sm-6 col-md-6 col-lg-4")
+        +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')       
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')       
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')       
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#') 
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#') 
+      div(class="col-sm-6 col-md-6 col-lg-4")
+       +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
+ 
+
