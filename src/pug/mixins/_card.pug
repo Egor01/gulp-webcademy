@@ -1,0 +1,16 @@
+mixin card(img_src,card_title,link,button_title,mod)
+		div(class='card card--' + mod)
+			div(class='card__img card__img--' + mod)
+				img(src=img_src)
+			.card__text
+				h3.card__title #{card_title}
+				+button(button_title,link)
+
+mixin card-post(img_src,card_title,link)
+	+card(img_src, card_title, link,'Читать','post')
+
+
+mixin card-portfolio(img_src,card_title,link)
+	+card(img_src,card_title,link,'Смотреть кейс','portfolio')
+
+//- end mixins for cardfont

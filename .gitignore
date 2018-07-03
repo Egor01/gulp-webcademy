@@ -12,6 +12,7 @@
 node_modules/
 app/bower/
 dist/
+build/
 .tmp/
 
 # OS or Editor folders

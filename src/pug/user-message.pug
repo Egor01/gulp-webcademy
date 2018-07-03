@@ -1,0 +1,25 @@
+extends layouts/main-admin.pug
+
+block variables
+    - var title = 'Сообщения от посетителей'
+    - var name = 'Сообщения от посетителей'
+    - var pageClass = 'user-message'
+block content
+    section.users_messages
+        div.container
+            div(class="content content--margin-sections")
+                h1.heading__1
+                        |Сообщения от посетителей
+                div.row
+                    div.col
+                        +message__user(
+                            "22 августа 2017",
+
+                            "Джон До",
+
+                            "johndoe@gmail.com",
+
+                            "Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.", 
+
+                            "Avrora-platform.pdf" )
+

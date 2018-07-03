@@ -1,0 +1,115 @@
+
+
+// content
+.content {
+	
+	&--margin-sections {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		
+		@media (min-width: 768px){
+			margin-top: 80px;
+			margin-bottom: 120px;
+		}
+	}
+	// заголовки 
+
+h1 {
+	font-size: 24px;
+	font-weight: 800;
+		
+	@media(min-width: 768px){
+		font-size: 28px;
+	}
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 600;
+	
+	@media(min-width: 768px){
+		font-size: 26px;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 800;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 800;
+}
+
+h5 {
+	font-size: 18px;
+	font-weight: 800;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 800;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	a {
+	color: #000;
+	text-decoration: underline;
+	}
+}
+
+// текст 
+
+p {
+	font-size: 14px;
+	line-height: 1.5;
+	@media (min-width: 768px){
+		font-size: 16px;
+		line-height: 2.0;
+	}
+}
+
+
+// ссылка в тексте
+a {
+	color: @blue__color;
+	
+}
+
+.button  a {
+	 	color:#fff;
+	}
+ 
+// список
+
+ul {
+	list-style-type: none;
+	
+		li {
+			position: relative;
+			color: #000;
+			margin-bottom: 20px;
+			line-height: 1.5;
+			
+			&:before {
+				content: "";
+				display: block;
+				width: 7px;
+				height: 7px;
+				background: @blue__color;
+				
+				position: absolute;
+				left: -20px;
+				top: 10px;
+			}
+		}
+}
+
+// /content
+}
+
+
+
+
+

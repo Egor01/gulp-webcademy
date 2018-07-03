@@ -1,0 +1,99 @@
+.button, a.button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color:  @blue__color;
+    padding: 11px 30px;
+    border-color: @lightgrey_color;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: @lightgrey_color;
+    }
+    &:active {
+        background-color: @lightrey-blue_color;
+        border-color: @lightrey-blue_color;
+    }
+
+    &__icon--left {
+        margin-right: 10px;
+        float: left;
+    }
+
+    &__icon--right {
+        margin-left: 10px;
+        float: right;
+    }
+
+    &--edit {
+        color: #ffffff;
+        background-color: #ffba00;
+        border-color: #ffba00;
+        &:hover {
+            background-color: #ffcf3e;
+            border-color: #ffcf3e;
+        }
+        &:active {
+            background-color: #f29a00;
+            border-color: #f29a00;
+        }
+        a {
+            color:#fff!important
+        }
+    }
+
+    &--delete {
+        font-size: 14px;
+        color: #ffffff;
+        padding: 9px 20px;
+        background-color: @red_color;
+        border-color: @red_color;
+
+        &:hover {
+            background-color: @lightred_color;
+            border-color: @lightred_color;
+        }
+        &:active {
+            background-color: @darkred_color;
+            border-color: @darkred_color;
+        }
+    }
+
+    &--save {
+        color: #ffffff;
+        background-color: @blue__color;
+        border-color: @blue__color;
+
+        &:hover {
+            background-color: @lightblue_color;
+            border-color: @lightblue_color;
+        }
+        &:active {
+            background-color: @darkblue_color;
+            border-color: @darkblue_color;
+        }
+    }
+
+
+    &--login {
+        color: @blue__color;
+        background-color: #ffffff;
+        border-color: #ffffff;
+        box-shadow: 3px 5px 16px 0px rgba(23, 50, 66, 0.75);
+        &:hover {
+            color: #ffffff;
+            background-color: @blue__color;
+            border-color: @blue__color;
+        }
+        &:active {
+            background-color: @darkblue_color;
+            border-color: @darkblue_color;
+            box-shadow: 0px 1px 4px 0px rgba(23, 50, 66, 0.75);
+        }
+    }
+}

@@ -1,0 +1,61 @@
+extends layouts/main.pug
+
+block variables
+    - var title = 'Главная страница'
+    - var name = 'Емельян Казаков'
+    - var pageClass = 'index-page'
+
+block content
+    div(class="content content--margin-sections")
+        div.container
+            div.main-page__about-me-block
+                div.row
+                    div(class="col-sm-12 col-md-12 col-lg-3")
+                        div.main-page__big-avatar
+                            +avatar_big("../img/avatar/photo-big.png")
+                    div(class="col-sm-12 col-md-12 col-lg-9")
+                        div.main-page__about-me
+                            h2.main-page-name
+                                |#{name}
+                            p
+                                |Я веб разработчик из Казани. Мне 28 лет. 
+                                |Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p
+                                |Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+                                |Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+                        div.main-page__about-me
+                            h3
+                                |Что я умею
+                            p
+                                |Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
+                                |Также знаком и могу решать не сложные задачи на Backend.
+                            p
+                                |Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+                        +button('Подробнее','#', '')
+
+            div.main-page__card-block
+                h1
+                    |Новые 
+                    a(href="#")
+                        |работы
+                div.row
+                    div(class="col-sm-6 col-md-6 col-lg-4")
+                        +card-portfolio('./img/works/work-1.jpg', 'Верстка Landing Page','#')
+                    div(class="col-sm-6 col-md-6 col-lg-4")
+                        +card-portfolio('./img/works/work-2.jpg', 'Верстка UI набора','#')
+                    div(class="col-sm-6 col-md-6 col-lg-4")
+                        +card-portfolio('./img/works/work-3.jpg', 'Верстка интернет магазина','#')
+
+            div.main-page__card-block
+                h1
+                    |Новые записи в 
+                    a(href="#")
+                        |блоге
+                div.row
+                    div(class="col-sm-6 col-md-6 col-lg-4")
+                        +card-post('./img/blog/blog-3.jpg', 'Поездка в New York','#')
+                    div(class="col-sm-6 col-md-6 col-lg-4")
+                        +card-post('./img/blog/blog-2.jpg', 'Что я делал в долине','#')
+                    div(class="col-sm-6 col-md-6 col-lg-4")
+                        +card-post('./img/blog/blog-1.jpg', 'Как я ходил в поход этим летом','#')

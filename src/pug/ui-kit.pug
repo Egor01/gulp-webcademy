@@ -1,0 +1,408 @@
+extends layouts/ui-layout.pug
+
+block variables
+    - var title = "Post"
+    - var post_title = "Национальный парк Йосемити"
+    - 
+        var post_links = [
+            {name: 'Емельян Казаков', link: '#', class_name:'post-links-name'},
+            {name: 'Путешествия', link: '#', class_name:'post-links-event'},
+            {name: '16 марта 2017', link: '#', class_name:'post-links-date'},
+            {name: '2 комментария', link: '#', class_name:'post-links-comments'},
+            ];
+
+
+block content
+    section.section__ui
+        h1.heading__ui
+            |Навигация по ui kit
+        ul(class='nav__ui')
+            li
+                a(href='#ui-buttons') UI Buttons - Кнопки
+            li
+                a(href='#ui-typography') UI Typography - Типографика
+            li
+                a(href='#ui-element') UI Element - Вспомогательные элементы
+            li
+                a(href='#ui-forms') UI Forms - Формы
+            li
+                a(href='#ui-header') UI Header - Шапка
+            li
+                a(href='#ui-card') UI Card - Карточка пост и портфолио
+            li
+                a(href='#ui-blog') UI Blog - Блог и оставить комментарий
+            li
+                a(href='#ui-comment') UI Comment - Два комментария, зарегистрироваться, сообщение от пользователя
+            li
+                a(href='#ui-footer') UI Footer - Подвал сайта
+
+
+
+    //- кнопки =============================================================
+
+    section.section__ui#ui-buttons
+        h1.heading__ui
+            |Кнопки
+        div.container
+            div.section__ui-mb
+                +button('Вперед','#','', 'fa-arrow-right')
+                br
+                +button('Подробнее','#', '')
+                br
+
+                +button('Редактировать','#', 'button--edit', 'fa-arrow-left', 'left')
+                br
+                +button('Удалить','#', 'button--delete', 'fa-trash-alt')
+                br
+                +button('Сохранить','#', 'button--save', 'fa-save')
+                br
+                +button('Войти','#', 'button--login')
+
+
+
+    //- типографика ========================================================
+
+    section.section__ui#ui-typography
+        h1.heading__ui
+            | Типографика
+        div.container
+            div.content
+                div.row
+                    div(class="col-sm-3")
+                        h3 Заголовки
+
+                        //- блок с заголовками
+                        h1
+                            | Заголовок 1
+                        h2
+                            | Заголовок 2
+                        h3
+                            | Заголовок 3
+                        h4
+                            | Заголовок 4
+                        h5
+                            | Заголовок 5
+                        h6
+                            | Заголовок 6
+                    div(class="col-sm-9")
+                        h3 Текст - абзацы, ссылки в тексте
+
+                         //- блок с текстом
+                        p
+                            |Парк находится в горах 
+
+                            //- ссылка в тексте
+                            a(href="#")
+                                |Сьерра-Невада 
+                            |на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км.
+
+                        //- блок с текстом
+                        p
+                            |Центром парка является долина 
+
+                            //- ссылка в тексте
+                            a(href="#")
+                                |Йосемити
+                            |, круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы.
+
+                        //- блок со списком
+                        h3 Список
+                        ul
+                            li
+                                |первый пункт
+                            li
+                                |Второй пункт. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней.
+                            li
+                                |третий пункт
+
+
+
+
+
+    //- карточки блог и потрфолио ===========================================
+
+    section.section__ui#ui-card
+        h1.heading__ui
+            |Компоненты
+        .container
+            .content
+                .row
+                    .col-sm-6.col-md-6.col-lg-4
+                        h2 Пост в блоге 
+                        +card-post('./img/bg/card_post.jpg', 'Поездка в New York пример  длинного названия поста ...','#')
+
+                    .col-sm-6.col-md-6.col-lg-4
+                        h2 Работа в портфолио
+                        +card-portfolio('./img/bg/card_portfolio.jpg', 'Верстка Landing Page','#')
+
+
+
+    //- Вспомогательные элементы ============================================
+
+    section.section__ui#ui-element
+        h1.heading__ui
+            |Вспомогательные элементы
+        div.container
+            div.content
+                div.section__ui-elements-block
+                    +user_profile("Пользователь")
+                div.section__ui-elements-block
+                    +checkbox("Запомнить меня")
+                div.section__ui-elements-block
+                    +avatar_big("../img/avatar/photo-big.png")
+                div.section__ui-elements-block
+                    +avatar_small("../img/avatar/foto-small-2.png")
+                div.section__ui-elements-block
+                    +input_email_error("Введите email")
+                div.section__ui-elements-block
+                    +empty_comment_error("Комментарий не может быть пустым.")
+                div.section__ui-elements-block
+                    +email_busy(" Данный email уже занят ")
+                div.section__ui-elements-block
+                    +wrong_emailorPass("Неверный email или пароль")
+
+
+
+    //- Шапка сайта ===========================================================
+    section.section__ui#ui-header
+        h1.heading__ui
+            | Шапка
+        div.container
+            div.content
+                div.section_ui-header-container
+                    div.section_ui-header-desc
+                        |Шапка - Гость
+                    div.section_ui-header
+                        div.section_ui-header-base
+                            include modules/logo.pug
+                            include modules/header-nav.pug
+                        div.section_ui-header__login
+                            div.section_ui-header__login-new
+                                a
+                                    |Регистрация
+                            div.section_ui-header__login-login
+                                a
+                                    |Вход
+                    div.section_ui-header-desc
+                        |Шапка - Пользователь
+                    div.section_ui-header
+                        div.section_ui-header-base
+                            include modules/logo.pug
+                            include modules/header-nav.pug
+                        div.section_ui-header__user
+                            div.section_ui-header__user-photo
+                                img(src="../img/ui-header/photo-admin.png",alt="")      
+                            div.section_ui-header__user-info
+                                div.section_ui-header__user-info-name
+                                    |Юрий Ключевский
+                                div.section_ui-header__user-info-desc
+                                    |Пользователь  
+                                div.section_ui-header__user-info-login
+                                    div.section_ui-header__user-info-login-button
+                                        |Профиль
+                                    div.section_ui-header__user-info-login-button
+                                        |Выход
+                    div.section_ui-header-desc
+                        |Шапка - Администратор
+                        //-Шапка администратора
+                    div.section_ui-header-admin
+                        div.section_ui-header-admin-photo
+                            img(src="../img/ui-header/photo-admin.png",alt="")
+                        div.section_ui-header-admin-info
+                            div.section_ui-header-admin-name  
+                                |Юрий Ключевский
+                            div.section_ui-header-admin-desc
+                                |Администратор  
+                        div.section_ui-header-admin-menu
+                            div.menu-begin
+                                ul
+                                    li
+                                        a(href="#")
+                                            div.menu-icon
+                                                i(class="fas fa-plus-circle")
+                                            |Пост
+                                    li      
+                                         a(href="#")
+                                            div.menu-icon
+                                              i(class="fas fa-plus-circle")
+                                            |Работа
+                                    li      
+                                        a(href="#")
+                                            div.menu-icon
+                                                i(class="fas fa-edit")
+                                            |Обо мне
+                                    li          
+                                        a(href="#")
+                                            div.menu-icon
+                                                 i(class="fas fa-edit")
+                                            |Контакты
+                                    li      
+                                        a(href="#")
+                                            div.menu-icon
+                                               i(class="fas fa-envelope")
+                                            |Сообщения
+                        div.menu-end
+                            a(href="#")
+                                div.menu-icon
+                                    i(class="fas fa-sign-out-alt")
+                                |Выход
+                    div.section_ui-header
+                         div.section_ui-header-base
+                             include modules/logo.pug
+                             include modules/header-nav.pug
+                    div.section_ui-header-desc
+                    
+
+    //- Комментарии пользователей и гостей сайта =============================
+
+    section.section__ui#ui-comment
+        h1.heading__ui
+            |Комментарии
+        div.container
+            div.content
+                h2.heading__2
+                    |2 комментария
+                div.row
+                    div(class="col col-mb")
+                        +comment__user("img/avatar/avatar-user.png", "avatar-user", "Джон До", "05 мая 2017 года в 15:45", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+                        +comment__user("img/avatar/avatar-user2.png", "avatar-user", "Джон До", "05 мая 2017 года в 15:45", "Замечательный парк, обязательно отправлюсь туда этим летом.")
+                h2.heading__2
+                        |Комментарий - зарегистрироваться
+                div.row
+                    div(class="col col-mb")
+                        div.comment__unreg
+                            div.comment__unreg-block
+                                span
+                                    a(href="#" class="content__link")
+                                        |Войдите
+                                    | или
+                                    a(href="#" class="content__link")
+                                        |зарегистрируйтесь
+                                span
+                                    |чтобы оставить комментарий
+                h2.heading__2
+                        |Сообщение от пользователя
+                div.row
+                    div.col
+                        +message__user(
+                            "22 августа 2017",
+
+                            "Джон До",
+
+                            "johndoe@gmail.com",
+
+                            "Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.", 
+
+                            "Avrora-platform.pdf" )
+
+
+
+
+    //- формы ================================================================
+
+    section.section__ui#ui-forms
+    h1.heading__ui
+        | Элементы формы
+    div.container
+        div.content
+            div.row
+                div(class="col")
+                    +form__field("поле ввода", "form-field", "введите...")
+                    +form__field("поле на всю ширину", "form-field", "введите...", "allWidth")
+                    +form__message("Сообщение - Textarea", "form-field", "Введите сообщение...")
+                    +form__file("Фотография",
+                                "Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.",
+                                "file",
+                                "выбрать файл")
+                    +form__file("Изображение",
+                                "Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.",
+                                "file",
+                                "выбрать файл")
+                    div.forms-group__file-img
+                            img(src="../../img/bg/park2.jpg", alt="")
+                            div.forms-group__file-img-bt-remove
+                                +button('Удалить','#', 'button--delete')
+    //- Блог-пост ================================================================   
+    .container
+        .post-title
+            h1.
+                #{post_title}
+        .post-links
+            ul
+                each item in post_links
+                    li
+                        a(href=item.link,class= item.class_name)= item.name         
+        .park-image
+        .text__park_description
+            p Парк находится в горах #[a(href="#") Сьерра-Невада] на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов.
+            p Центром парка является долина #[a(href="#") Йосемити], круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками.    
+
+
+
+    //- Блог-пост оставить комментарий ================================================================   
+    div.container
+        .row
+            .col-12
+                .comment-post__title Оставить комментарий
+                .comment-post
+                            +avatar_small('/img/avatar/foto-small-2.png')
+                            .comment-post__author Юрий Ключевский
+                            .comment-post__form
+                                +empty_comment_error('Комментарий не можетt быть пустым.')
+                                textarea( class="form-message" name="Message" placeholder="Присоединиться к обсуждению...")
+                                +button('Опубликовать','#', '')
+                   
+
+    //- Подвал сайта =========================================================
+
+    section.section__ui#ui-footer
+        h1.heading__ui
+            | Подвал сайта
+        footer.main-footer
+            div.container
+                div.row
+                    div(class="col-sm-12 col-md-6 col-lg-4 col-xl-4")
+                        div.footer__copyright
+                            p
+                                |© TRUE CODER
+                            p
+                                |Создано с
+                                i(class="fas fa-heart")
+                                |в 
+                                a(href="http://webcademy.ru/webdev/")
+                                    |WebCademy.ru
+                                |в 2018 году
+                    div(class="col-sm-12 col-md-2 col-lg-4 col-xl-4")
+                        nav.footer__nav
+                            ul
+                                li
+                                    a(href="#")
+                                        |Главная
+                                li
+                                    a(href="#")
+                                        |Обо мне
+                                li
+                                    a(href="#")
+                                        |Работы
+                                li
+                                    a(href="#")
+                                        |Блог
+                                li
+                                    a(href="#")
+                                        |Контакты
+                    div(class="col-sm-12 col-md-4 col-lg-4 col-xl-4")
+                        div.footer__social
+                            a(href="#")
+                                i(class="fab fa-vk")
+                            a(href="#")
+                                i(class="fab fa-twitter")
+                            a(href="#")
+                                i(class="fab fa-youtube")
+                            a(href="#")
+                                i(class="fab fa-instagram")
+                            a(href="#")
+                                i(class="fab fa-facebook-f")
+
+
+
+

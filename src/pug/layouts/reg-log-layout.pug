@@ -1,0 +1,61 @@
+include ../mixins/_buttons.pug
+include ../mixins/_comments-users.pug
+include ../mixins/_card.pug
+include ../mixins/_elements.pug
+
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		title #{title}
+		
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		<![endif]-->
+
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		
+		meta(name="keywords" content="")
+		meta(name="description" content="")
+		
+		<!-- build:cssVendor css/vendor.css -->
+		link(rel="stylesheet", href="libs/normalize-css/normalize.css")
+		link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
+		<!-- endbuild -->
+
+		//- styles for cdn
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&amp;subset=cyrillic" rel="stylesheet")
+
+		<!-- build:cssCustom css/main.css -->
+		link(rel="stylesheet", href="css/main.css")
+		<!-- endbuild -->
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+		
+	body
+		block content
+
+
+		<!-- build:jsLibs js/libs.js -->
+		script(src="libs/jquery/jquery.min.js")
+		<!-- endbuild -->
+
+		<!-- build:jsVendor js/vendor.js -->
+		block scripts
+		<!-- endbuild -->
+
+		//- scripts for cdn
+		block scripts
+			script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+
+		
+		<!-- build:jsMain js/main.js -->
+		script(src="js/main.js")
+		<!-- endbuild -->
+
+
+	

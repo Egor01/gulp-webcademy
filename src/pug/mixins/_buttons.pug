@@ -1,0 +1,21 @@
+
+mixin button(text, link, btnclass, icon, left)
+    if icon
+        if left
+            a(href=link class="button " + btnclass)
+                | #{text}
+                span.button__icon--left
+                    i(class="fas " + icon)
+        else
+            a(href=link class="button " + btnclass)
+                | #{text}
+                span.button__icon--right
+                    i(class="fas " + icon)      
+    else
+        a(href=link class="button " + btnclass)
+            | #{text}
+
+
+mixin buttons-reglog(text)
+    button(class="button button--login" type="submit" value="")
+        |#{text}
